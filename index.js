@@ -76,17 +76,18 @@ $(function (){
         registro.DtNascimento = DtNascimento
         registro.Formacao = Formacao
 
-        if (!_id || _id == "0"){
+        if (!_id || _id == "0") {
             let registro = {}
-            item.Nome = Nome
-            item.Sobrenome = Sobrenome
-            item.DtNascimento = DtNascimento
-            item.Formacao = Formacao
+            registro.Nome = Nome
+            registro.Sobrenome = Sobrenome
+            registro.DtNascimento = DtNascimento
+            registro.Formacao = Formacao
 
             registro.ID = dados.length + 1
 
             dados.push(registro)
-        } else{
+        }
+        else{
             dados.forEach(function(item) {
                 if (item.ID == _id) {
                     item.Nome = Nome
