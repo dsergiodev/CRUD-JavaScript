@@ -60,7 +60,7 @@ $(function (){
         PopulaTabela()
     }
 
-    $("#btnSalvar").click(function() {
+    $("#btnSalvar").click(function(item) {
         //EVENTO CLICK DO BOTÃO SALVAR
         
         let _id = $("#hdTD").val()
@@ -102,6 +102,7 @@ $(function (){
         $("#modalRegistro").modal("hide")
 
         //LIMPEZA DOS CAMPOS
+        $("#hdTD").val("0")
         $("#txtNome").val("")
         $("#txtSobrenome").val("")
         $("#txtDtNascimento").val("")
